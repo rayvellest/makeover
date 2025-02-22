@@ -1,0 +1,484 @@
+/* Color Scheme */
+:root {
+  --primary: #042632; /* Dark Teal */
+  --primary-light: #084a61; /* Lighter Teal */
+  --primary-dark: #021d22; /* Darker Teal */
+
+  --secondary: #fc751c; /* Soft Orange */
+  --secondary-light: #e35b5f; /* Lighter Orange */
+  --secondary-dark: #8d181c; /* Darker Orange */
+  
+  --tertiary: #98ffb1;
+  --tertiary-light: #cbffd8;
+  --tertiary-dark: #006519;
+  
+  --light: #f9f9f9; /* Light Grey */
+  --dark: #1c1c1c; /* Dark Grey */
+
+  --salmon: #fff7f1; /* Light Grey */
+}
+
+
+/* General Styles */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  font-family: "Onest", serif;
+  margin: 0;
+  padding: 0;
+} 
+
+/* Headings */
+
+p {
+  font-size: 1em;
+  color: var(--dark);
+}
+
+/* Anchor Links */
+a, a:visited {
+  text-decoration: none;
+  color: var(--secondary);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em 5em 0.4em;
+  min-height: 150px;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+header h2 {
+  text-align: left;
+  font-weight: 900;
+}
+
+header img {
+  width: 100px;
+}
+
+/* Navigation */
+header nav {
+  text-align: right;
+  font-size: 1.2em;
+}
+
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  padding: 0 1em;
+  display:inline-block;
+}
+
+header nav ul li a {
+  transition: background-color 0.5s ease;
+}
+
+header nav ul li a:hover {
+  font-weight: 500;
+  text-decoration: none;
+  transform: scale(3);
+  color: var(--primary);
+}
+
+/* Hero Section */
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  background-color: white;
+  min-height: 600px;
+  padding: 2em 4em;
+  background-color: var(--light);
+  background-image: url("../images/texture-1.jpg");
+  background-size: cover; /* or contain */
+  background-position: top center; /* or 50% 0%, etc. */
+}
+
+.hero h2 {
+  font-size: 5.5em;
+  line-height: 1em;
+  color: #042632;
+  width: 50%;
+  font-family: "Fira Sans", serif;
+  font-weight: 900;
+  font-style: italic;
+  text-align: left;
+  margin-left:80px;
+}
+
+.hero em {
+  color: var(--secondary);
+}
+
+.hero button {
+  padding: 1em 2em;
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.hero img {
+  width: 600px;
+  padding: 0;
+  margin-bottom: -36px;
+  margin-right: 100px;
+}
+/* Problem Section */
+
+.problem {
+  padding: 2em 4em;
+  text-align: center;
+  font-size: 3em;
+  background-color: var(--tertiary-light);
+  color: var(--primary);
+  background-image: url("../images/flow.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.problem h3 {
+  font-family: "Fira Sans", serif;
+  font-weight: 400;
+  font-style: regular;
+  line-height: 1.2em;
+}
+
+.problem h3 em {
+  color: var(--secondary);
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* FAQ Section */
+
+.faq {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6em 3em;
+  text-align: left;
+  font-size: 1em;
+  background-color: var(--light);
+  color: var(--dark);
+  background-image: url("../images/texture-4.jpg");
+  background-size: cover; /* or contain */
+  background-position: top center; /* or 50% 0%, etc. */
+}
+
+.faq .left {
+  text-align: center;
+}
+
+
+.faq img {
+  width: 70%;
+  align-self: center;
+  justify-self: center;
+  
+}
+
+.faq div {
+  width: 50%;
+}
+
+.faq h2 {
+  font-size: 2.2em;
+  margin-top: 0em;
+  font-family: "Fira Sans", serif;
+  font-style: italic;
+  font-weight: 600;
+  margin-left: 20px;
+  color: var(--secondary);
+}
+
+.faq h3 {
+  font-size: 1.2em;
+  font-family: "Fira Sans", serif;
+  font-style: italic;
+  font-weight: 500;
+  color: #007978;
+}
+
+details {
+  border-top: 1px solid #ddd;
+  padding: 1em 1em 0.5em;
+  transition: all 0.3s ease;
+}
+
+details:last-of-type {
+  border-bottom: 1px solid #ddd;
+}
+
+details summary {
+  font-size: 1.2em;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none; /* removes default disclosure arrow in some browsers */
+  outline: none; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+details summary::-webkit-details-marker {
+  display: none; /* removes default arrow in Chrome/Safari */
+}
+
+details summary::after {
+  content: "+"; /* Default collapsed symbol */
+  color: #007978; 
+  font-size: 2em;
+}
+
+details[open] summary::after {
+  content: "-"; /* Change to minus when open */
+  color: #ddd; /* Purple color */
+}
+
+details p {
+  margin: 0.8rem 0 0;
+  line-height: 1.5;
+}
+
+details[open] {
+  padding-bottom: 2em;
+}
+
+/* Testimonials Section */
+
+.testimonials {
+  text-align: center;
+  background-color: var(--light);
+  padding: 2em 1em;
+}
+
+.testimonials h2 {
+  font-size: 3em;
+  line-height: 1em;
+  margin-bottom: 0.5em;
+}
+
+.testimonials p {
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  margin-bottom: 2.2em;
+}
+
+.testimonials ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+}
+
+.testimonials ul li {
+  list-style: none;
+  padding: 0.5em;
+}
+
+/* Offer */
+
+.offer {
+  margin: 0 auto;
+  padding: 6em 1em;
+  text-align: center;
+  background-color: var(--primary);
+  color: white;
+  background-image: url("../images/texture-3.jpg");
+  background-size: cover; /* or contain */
+  background-position: top center; /* or 50% 0%, etc. */
+}
+
+.offer h2 {
+  color: #7af7a6;
+  font-family: "Fira Sans", serif;
+  font-size: 3em;
+  font-weight: 400;
+  font-style: italic;
+  margin:0;
+}
+
+.offer p {
+  margin-bottom: 3em;
+  font-size: 1em;
+  color: white;
+}
+
+.offer .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.offer .card {
+  background-color: var(--primary-dark);
+  border: 2px solid var(--light);
+  border-radius: 20px;
+  width: 300px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  color: white;
+  margin-top: 10px;
+  background-image: url("../images/texture-2.jpg");
+  background-size: contain;
+  background-position: center;
+}
+
+.offer .card h3 {
+  margin: 1em 0 0 0;
+  font-size: 1.6em;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: 400;
+}
+
+.offer .card p.price {
+  font-size: 3.2em;
+  margin: 0.5em;
+  font-weight: bolder;
+  color: #f9f9f9; /* Price highlight color */
+}
+
+.offer .card button {
+  background-color: var(--tertiary);
+  font-family: "Onest", serif;
+  color: black;
+  padding: 1em 2em;
+  border-radius: 40px;
+  text-decoration: none;
+  margin-bottom: 1em;
+  font-weight: 600;
+  font-size: 1em;
+  font-weight: 600;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.offer button:hover {
+  transform: scale(1.05);
+  background-color: var(--tertiary-light);
+  
+}
+
+.offer .extra-info {
+  font-style: italic;
+  color: #ccc;
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  text-align:left;
+}
+
+.offer .card-details {
+  padding: 0;
+  margin-top:0;
+  margin-left: 3em;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.offer .card-details li {
+  margin: 0.3rem 0;
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  gap: 3em;
+  padding: 4.5em;
+  background-color: var(--light);
+  color: #042632;
+  text-align: left;
+  background-color: #fff7f1;
+  background-image: url("../images/bg-contact.jpg");
+  background-size: contain;
+  background-position: top center;
+}
+
+.contact h2 {
+  font-family: "Fira Sans", serif;
+  font-size: 2.2em;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--primary-light);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 40em;
+  padding: 2em;
+}
+
+form label {
+  margin: 1rem 0 0.4rem;
+  font-weight: 600;
+}
+
+form input,
+form textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  border: 1px solid #fce6d5;
+  border-radius: 12px;
+  padding: 0.8em;
+  color: #fce6d5;
+  margin-bottom: 0.8em;
+}
+
+form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+form button {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  padding: 0.8em 1.2em;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 1em;
+  transition: background-color 0.5s ease;
+}
+
+form button:hover {
+  background-color: var(--secondary);
+  transform: scale(1.01);
+}
+
+/* Footer */
+footer {
+  padding: 2em;
+  text-align: center;
+  font-size: 1em;
+  background-color:white;
+}
